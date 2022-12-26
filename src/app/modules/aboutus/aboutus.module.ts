@@ -1,5 +1,6 @@
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
+// 3rd party
 import {TranslateModule} from '@ngx-translate/core';
 // custom material
 import {customMaterialModule} from "../../shared/customMaterial.module";

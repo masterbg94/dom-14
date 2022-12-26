@@ -20,6 +20,15 @@ export const routes: Routes = [
       description: 'Firma osnovana 93.godine i lider smo na trzistu montaznih kuca.Koristimo prirodne materijale za montazne kuce i savremenu tehnologiju sa vrhunskim strucnjacima',
       ogTitle: 'Dom montazne kuce|O nama',
     },
+  },
+  {
+    path: 'gallery',
+    loadChildren: () => import('./modules/gallery/gallery.module').then(m => m.GaleryModule),
+    data: {
+      title: 'Dom montazne kuce|Galerija montaznih kuca Ivanjica',
+      description: 'Firma osnovana 93.godine i lider smo na trzistu montaznih kuca.Koristimo prirodne materijale za montazne kuce i savremenu tehnologiju sa vrhunskim strucnjacima',
+      ogTitle: 'Dom montazne kuce|Galerija montaznih kuca Ivanjica',
+    },
   }
 ]
 

@@ -1,0 +1,109 @@
+@import "../../../styles/palete";
+@import "../../../../../node_modules/bootstrap-scss/bootstrap";
+
+.wrapper {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: $ap-grey;
+
+  .header-wrapper {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    padding-top: 90px;
+
+    img {
+      position: absolute;
+      right: 0;
+      height: 100%;
+      max-width: 100%;
+      top: 40px;
+    }
+
+    .header {
+      height: 400px;
+      padding-bottom: 40px;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#424242+2,424242+47,424242+52,424242+100 */
+      background: #333333; /* Old browsers */
+      width: 100%;
+
+      .text {
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+        height: 100%;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        .left {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 50%;
+
+          h3 {
+            font-size: 18px;
+            color: $ap-yellow !important;
+          }
+
+          p {
+            margin: 0;
+            color: $ap-grey;
+          }
+
+        }
+
+        .right {
+          width: 40%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          p {
+            margin: 0;
+            color: $ap-grey;
+            display: flex;
+            justify-content: flex-end;
+            position: absolute;
+            max-width: 80%;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 0;
+    margin: auto;
+
+    ::ng-deep.outerContainer {
+      z-index: 11111;
+
+      .right.activeArrow {
+
+      }
+
+      .left.activeArrow {
+      }
+    }
+  }
+}
+
+.ribbon {
+  width: 100%;
+  min-height: 20px;
+  position: relative;
+
+  img {
+    left: 0 !important;
+    right: 0 !important;
+    position: absolute !important;
+    bottom: 0;
+  }
+}
