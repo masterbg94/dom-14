@@ -9,6 +9,7 @@ import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {customMaterialModule} from "./shared/customMaterial.module";
+import {FooterModule} from "./shared/components/footer/footer.module";
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -21,10 +22,11 @@ export function createTranslateLoader(http: HttpClient) {
   imports: [
     BrowserAnimationsModule,
     AppRoutingModule,
-    HomeModule,
     NgbModule,
     customMaterialModule,
+    HomeModule,
     NavigationMenuModule,
+    FooterModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

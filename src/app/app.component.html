@@ -2,7 +2,7 @@
 <div class="div" *ngIf="innerWidth > 1024">
   <app-navigation-menu></app-navigation-menu>
   <router-outlet></router-outlet>
-<!--  <app-footer></app-footer>-->
+  <app-footer></app-footer>
 </div>
 
 <mat-drawer-container class="main-container" *ngIf="innerWidth < 1025 " style="height: 100%">
@@ -91,7 +91,7 @@
 
   <div class="content" style="padding-top: 100px">
     <router-outlet></router-outlet>
-<!--    <app-footer></app-footer>-->
+    <app-footer></app-footer>
   </div>
 </mat-drawer-container>
 
