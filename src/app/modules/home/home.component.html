@@ -1,0 +1,129 @@
+<div class="slider" style="position: relative;">
+  <carousel>
+    <slide>
+      <div class="first">
+        <div class="first-text">
+          <div class="blocks">
+            <div class="triangleBottomLeft"></div>
+            <div class="block1">
+              <span>{{'SLIDE.slide1-heading'}}</span>
+            </div>
+            <div class="block2"></div>
+          </div>
+          <div class="blocks2">
+            <div class="triangleBottomLeft"></div>
+            <div class="block1">
+              <span>{{'SLIDE.slide1-subheading'}}</span>
+            </div>
+          </div>
+          <div class="text">
+            <p [innerHTML]="'SLIDE.slide1-txt'"></p>
+          </div>
+          <button mat-button [routerLink]="'gallery'">{{'SLIDE.slide1-button'}}</button>
+        </div>
+      </div>
+    </slide>
+    <slide>
+      <div class="third">
+        <div class="third-text">
+          <div class="blocks">
+            <div class="triangleBottomLeft"></div>
+            <div class="block1">
+              <span>{{'SLIDE.slide2-heading'}}</span>
+            </div>
+            <div class="block2"></div>
+          </div>
+          <div class="blocks2">
+            <div class="triangleBottomLeft"></div>
+            <div class="block1">
+              <span>{{'SLIDE.slide2-subheading'}}</span>
+            </div>
+          </div>
+          <div class="text">
+            <p>
+              {{'SLIDE.slide2-txt'}}
+            </p>
+          </div>
+          <button mat-button style="width: 300px" [routerLink]="'tehnology'">{{'SLIDE.slide2-button'}}</button>
+        </div>
+      </div>
+    </slide>
+    <slide>
+      <div class="second">
+        <div class="second-text">
+          <div class="blocks">
+            <div class="triangleBottomLeft"></div>
+            <div class="block1">
+              <span>{{'SLIDE.slide3-heading'}}</span>
+            </div>
+            <div class="block2"></div>
+          </div>
+          <div class="blocks2">
+            <div class="triangleBottomLeft"></div>
+            <div class="block1">
+              <span>{{'SLIDE.slide3-subheading'}}</span>
+            </div>
+          </div>
+          <div class="text">
+            <p>
+              {{'SLIDE.slide3-txt'}}
+            </p>
+          </div>
+          <button mat-button [routerLink]="'contact'">{{'SLIDE.slide3-button'}}</button>
+        </div>
+      </div>
+    </slide>
+  </carousel>
+</div>
+<div class="ribbon">
+  <div class="ribbon-text">
+    <div class="text">
+      <span style="font-weight: 500">{{'ribbon-heading' }}</span>
+      <span style="font-weight: 300">{{'ribbon-subheading' }}</span>
+    </div>
+    <button mat-raised-button="" [routerLink]="'/contact'">{{'ribbon-button' }}</button>
+  </div>
+</div>
+<div class="wrapper">
+  <div class="content">
+    <div class="title">
+      <h3>{{'HOME-SERVICES.service-heading'}}</h3>
+      <h1>{{'HOME-SERVICES.service-subheading'}}<span>{{'HOME-SERVICES.service-subheading1'}}</span></h1>
+      <p>
+        {{'HOME-SERVICES.service-txt'}}
+      </p>
+    </div>
+    <div class="containers">
+      <div class="container" routerLink="/tehnology">
+        <img src="../../../../assets/images/home-images/tehnologija.png">
+        <button mat-button>{{'technology'|uppercase}}</button>
+      </div>
+      <div class="container" routerLink="/aboutus">
+        <img src="../../../../assets/images/home-images/tehnology.png">
+        <button mat-button>{{'MENU.aboutus'|uppercase}}</button>
+      </div>
+      <div class="container" routerLink="/gallery">
+        <img src="../../../../assets/images/home-images/galerija.png">
+        <button mat-button>{{'MENU.gallery'|uppercase}}</button>
+      </div>
+    </div>
+    <div class="map-content">
+      <div class="map">
+        <img src="../../../../assets/images/home-images/map.png">
+      </div>
+      <div class="text-container">
+        <h3>{{'map-txt1'}}</h3>
+        <h1>{{'map-txt2'}}</h1>
+        <h1 style="color: #FFC200">{{'map-txt3'}}</h1>
+        <p>
+          {{'map-txt4'}}
+        </p>
+        <button mat-raised-button>{{'map-button'}}</button>
+      </div>
+    </div>
+    <!--<div class="title">
+      <h3>POSLUJEMO NA OBOSTRANO ZADOVOLjSTVO</h3>
+      <h1>STO MOGU <span>POTVRDITI I NASI KLIJENTI</span></h1>
+    </div>-->
+  </div>
+</div>

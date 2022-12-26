@@ -1,0 +1,77 @@
+<div id="header">
+  <div class="header-search">
+    <div class="content">
+      <div class="call">
+        <mat-icon>phone</mat-icon>
+        <p>Pozovite nas: 381649230407</p>
+        <p>381666404110</p>
+      </div>
+      <div class="search">
+        <div class="right">
+          <div class="language-selector"
+               ngbDropdown
+            #myDrop="ngbDropdown"
+               aria-expanded=false
+            [routerLinkActive]="['active']">
+
+            <a class="nav-link"
+               role="button"
+               ngbDropdownToggle
+               style="cursor: pointer;user-select: none;display: flex">
+
+              <img class="flag" src="{{currentLanguage.flag}}">
+              <div class="label">{{currentLanguage.label }}</div>
+            </a>
+
+            <div ngbDropdownMenu
+                 class="dropdown-menu show"
+                 aria-labelledby="dropdownManual"
+              (click)="navbarCollapsed = false">
+
+              <button class="dropdown-item"
+                *ngFor="let language of availableLanguages"
+                (click)="setLanguage(language)">
+
+                <img class="flag" [src]="language.flag">
+                {{language.label }}
+              </button>
+            </div>
+          </div>
+
+          <div class="social">
+            <div class="circle f">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+
+            <div class="circle t">
+              <i class="fab fa-twitter"></i>
+            </div>
+
+            <div class="circle g">
+              <i class="fab fa-google-plus-g"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-menu">
+    <div class="content">
+      <div class="logo" routerLink="/" style="outline: none;cursor: pointer;height: 100%">
+        <img src="../assets/images/logo/pavas-logo-white.png" style="height: 100%;max-height: 40px">
+        <img src="../assets/images/logo/pavas-logo-text-white.png" style="height: 100%;max-height: 40px">
+      </div>
+      <div class="menu">
+        <ul>
+          <li
+            *ngFor="let nav of menu"
+            [routerLinkActive]="['active-link']"
+            [routerLink]="nav.router"
+            [routerLinkActiveOptions]= "{exact:true}">
+            {{nav.name}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
