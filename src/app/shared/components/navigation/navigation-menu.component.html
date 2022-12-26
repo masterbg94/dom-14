@@ -8,33 +8,31 @@
       </div>
       <div class="search">
         <div class="right">
-          <div class="language-selector"
-               ngbDropdown
-            #myDrop="ngbDropdown"
-               aria-expanded=false
-            [routerLinkActive]="['active']">
+          <div class="language-selector">
+            <div ngbDropdown class="d-inline-block">
+              <a class="nav-link"
+                 role="button"
+                 type="button"
+                 ngbDropdownToggle
+                 id="dropdownBasic1"
+                 style="cursor: pointer;user-select: none;display: flex;height: 100%">
 
-            <a class="nav-link"
-               role="button"
-               ngbDropdownToggle
-               style="cursor: pointer;user-select: none;display: flex">
+                <img class="flag" src="{{currentLanguage.flag}}">
+                <div class="label">{{currentLanguage.label | translate}}</div>
+              </a>
+              <div ngbDropdownMenu
+                   aria-labelledby="dropdownBasic1"
+                   (click)="navbarCollapsed = false">
 
-              <img class="flag" src="{{currentLanguage.flag}}">
-              <div class="label">{{currentLanguage.label | translate}}</div>
-            </a>
+                <button class="dropdown-item"
+                        *ngFor="let language of availableLanguages"
+                        (click)="setLanguage(language)">
 
-            <div ngbDropdownMenu
-                 class="dropdown-menu show"
-                 aria-labelledby="dropdownManual"
-              (click)="navbarCollapsed = false">
+                  <img class="flag" [src]="language.flag">
+                  {{language.label | translate}}
+                </button>
+              </div>
 
-              <button class="dropdown-item"
-                *ngFor="let language of availableLanguages"
-                (click)="setLanguage(language)">
-
-                <img class="flag" [src]="language.flag">
-                {{language.label | translate}}
-              </button>
             </div>
           </div>
 
@@ -67,7 +65,7 @@
             *ngFor="let nav of menu"
             [routerLinkActive]="['active-link']"
             [routerLink]="nav.router"
-            [routerLinkActiveOptions]= "{exact:true}">
+            [routerLinkActiveOptions]="{exact:true}">
             {{nav.name | translate}}
           </li>
         </ul>

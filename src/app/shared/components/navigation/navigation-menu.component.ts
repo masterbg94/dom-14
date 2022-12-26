@@ -78,7 +78,7 @@ export class NavigationMenuComponent implements OnInit {
 
     window.onscroll = function () {
       const currentScrollPos = window.pageYOffset;
-      console.log(currentScrollPos);
+      // console.log(currentScrollPos);
 
       if (prevScrollpos > currentScrollPos) {
         document.getElementById('header').classList.remove('hidden');

@@ -1,0 +1,13 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$pavas-theme-primary: mat-palette($mat-orange);
+$pavas-theme-accent:  mat-palette($mat-brown);
+
+$pavas-theme-warn:    mat-palette($mat-red);
+
+
+$pavas-theme: mat-light-theme($pavas-theme-primary, $pavas-theme-accent, $pavas-theme-warn);
+
+@include angular-material-theme($pavas-theme);
