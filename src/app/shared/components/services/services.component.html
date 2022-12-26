@@ -1,0 +1,37 @@
+<div class="content">
+  <div class="service" *ngFor="let service of serviceFirstRow" style="flex-direction: column">
+    <div class="iconUp">
+      <div class="icon" style="background: #FFC200">
+        <mat-icon>{{service.icon}}</mat-icon>
+        <h4>
+          {{service.title|translate}}
+        </h4>
+      </div>
+    </div>
+    <div class="text">
+      <p style="padding: 0 20px;">
+        {{service.text|translate}}
+      </p>
+    </div>
+  </div>
+  <div class="service black" *ngFor="let service of serviceSecondRow">
+    <div class="icon" style="background: #414042" [ngStyle]="{'padding-left' : innerWidth < 570 ? '20px' : '10px',
+         'justify-content' : innerWidth < 570 ? 'flex-start' : 'center'
+          }
+        ">
+      <mat-icon [ngStyle]="{'width' : innerWidth < 570 ? '36px' : '100%'}">
+        {{service.icon}}</mat-icon>
+      <span *ngIf="innerWidth < 570" style="margin-left: 10px">
+        {{service.title|translate}}
+      </span>
+    </div>
+    <div class="text">
+      <h4 *ngIf="innerWidth > 570">
+        {{service.title|translate}}
+      </h4>
+      <p>
+        {{service.text|translate}}
+      </p>
+    </div>
+  </div>
+</div>

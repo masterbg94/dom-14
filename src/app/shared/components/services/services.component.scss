@@ -1,0 +1,139 @@
+@import '../../../styles/palete';
+@import '~material-design-icons/iconfont/material-icons.css';
+
+.content {
+  max-width: 1200px;
+  display: flex;
+  margin: auto;
+  height: 100%;
+  background: $ap-grey;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  justify-content: space-between;
+  padding-bottom: 40px;
+
+  .service {
+    display: flex;
+    width: 48%;
+    border: 1px solid #d1d1d1;
+    background: white;
+    margin-top: 40px;
+
+    .icon {
+      background: $ap-black-primary;
+    }
+
+    .iconUp {
+      display: flex;
+
+      .icon {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 7px 20px;
+
+        h4 {
+          margin: 0;
+          font-size: 16px;
+          color: $ap-black-primary;
+          font-weight: 300;
+          padding-left: 10px;
+        }
+
+        mat-icon {
+          width: auto;
+          color: $ap-black-primary;
+        }
+      }
+    }
+
+    .icon {
+      background: $ap-yellow;
+      height: 100%;
+      min-width: 75px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      mat-icon {
+        color: white;
+        font-size: 36px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+      }
+    }
+
+    .text {
+      padding: 20px 0 20px 20px;
+
+      h4 {
+        font-size: 16px;
+        padding-bottom: 15px;
+        margin: 0;
+        color: $ap-black-primary;
+        font-weight: 300;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .content {
+    padding: 0 15px;
+
+    .services {
+      padding: 0 15px;
+
+      .text {
+        p {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 570px) {
+  .content {
+    flex-direction: column;
+    width: 100%;
+
+    .service {
+      width: 100% !important;
+
+      &.black {
+        flex-direction: column;
+
+        span {
+          color: white;
+          font-size: 16px;
+        }
+
+        .icon {
+          padding: 10px;
+        }
+      }
+    }
+
+    .services {
+      padding: 0 15px;
+
+      .headLine {
+        padding: 40px 0 25px 0;
+      }
+
+      .service {
+        width: 100%;
+        margin-top: 15px;
+      }
+    }
+  }
+
+}
