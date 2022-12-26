@@ -1,0 +1,228 @@
+<div class="wrapper">
+  <div class="headerImage"></div>
+  <div class="content">
+    <div class="title">
+
+      <h1>{{'OBJECTS.typical'|translate|uppercase}} <span>{{'OBJECTS.object'|translate|uppercase}}</span></h1>
+
+    </div>
+
+    <!--      NOVO -->
+    <mat-tab-group>
+      <mat-tab [label]="'OBJECTS.prizemne'|translate">
+        <div class="container">
+          <div class="apartment" *ngFor="let object of prizemneKuce" [routerLink]="'/objects/' + object?.id"
+               style="outline: none">
+            <div class="image" *ngIf="object">
+              <div class="icon">
+                <div class="eye">
+                  <mat-icon>remove_red_eye</mat-icon>
+                </div>
+              </div>
+
+              <img [src]="'../../../../assets/images/objekti/' + object.mainImage">
+            </div>
+            <div class="icons">
+      <span>
+        <mat-icon style="margin-right: 5px">zoom_out_map</mat-icon>
+        {{object.area}} m2
+      </span>
+              <span>
+        <mat-icon style="margin-right: 5px">hotel</mat-icon>
+                {{object.rooms}} {{(object.rooms > 1 ? 'OBJECTS.2bedroom' : 'OBJECTS.1bedroom')|translate}}
+      </span>
+            </div>
+            <div class="text">
+              <div class="name">
+                <span>{{object.name}}</span>
+                <span><mat-icon>remove_red_eye</mat-icon> 1000</span>
+              </div>
+              <p>
+                {{'OBJECTS.detailArea'|translate}} {{object.area}}
+                m2. {{'OBJECTS.detailRooms'|translate}} {{object.rooms}} {{(object.rooms > 1 ? 'OBJECTS.2bedroom' : 'OBJECTS.1bedroom')|translate}}
+                , {{object.bathrooms}}  {{'OBJECTS.bathRoom'|translate}}
+                {{'OBJECTS.and'|translate}} {{object.terace}} {{'OBJECTS.terrace'|translate}}.
+              </p>
+            </div>
+            <!--<div class="price">
+              <p *ngIf="object.id !== 1 && object.id !== 2 && object.id !==  6 && object.id !== 7 && object.id !== 9">
+                Cena već od €{{object.area * 180}}
+              </p>
+              <p *ngIf="object.id === 1">Cena već od €19667</p>
+              <p *ngIf="object.id === 2">Cena već od €17844</p>
+              <p *ngIf="object.id === 6">Cena već od €13570</p>
+              <p *ngIf="object.id === 7">Cena već od €18124</p>
+              <p *ngIf="object.id === 9">Cena već od €30395</p>
+            </div>-->
+            <div class="address">
+              <p>{{'OBJECTS.type'|translate}} {{object.buildingType|translate}}</p>
+            </div>
+            <div class="button">
+              <button mat-raised-button style="color: black">{{'OBJECTS.viewDetails'|translate}}</button>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab [label]="'OBJECTS.spratne'|translate">
+        <div class="container">
+          <div class="apartment" *ngFor="let object of spratneKuce" [routerLink]="'/objects/' + object?.id"
+               style="outline: none">
+            <div class="image" *ngIf="object">
+              <div class="icon">
+                <div class="eye">
+                  <mat-icon>remove_red_eye</mat-icon>
+                </div>
+              </div>
+
+              <img [src]="'../../../../assets/images/objekti/' + object.mainImage">
+            </div>
+            <div class="icons">
+      <span>
+        <mat-icon style="margin-right: 5px">zoom_out_map</mat-icon>
+        {{object.area}} m2
+      </span>
+              <span>
+        <mat-icon style="margin-right: 5px">hotel</mat-icon>
+                {{object.rooms}} {{(object.rooms > 1 ? 'OBJECTS.2bedroom' : 'OBJECTS.1bedroom')|translate}}
+      </span>
+            </div>
+            <div class="text">
+              <div class="name">
+                <span>{{object.name}}</span>
+                <span><mat-icon>remove_red_eye</mat-icon> 1000</span>
+              </div>
+              <p>
+                {{'OBJECTS.detailArea'|translate}} {{object.area}}
+                m2. {{'OBJECTS.detailRooms'|translate}} {{object.rooms}} {{(object.rooms > 1 ? 'OBJECTS.2bedroom' : 'OBJECTS.1bedroom')|translate}}
+                , {{object.bathrooms}}  {{'OBJECTS.bathRoom'|translate}}
+                {{'OBJECTS.and'|translate}} {{object.terace}} {{'OBJECTS.terrace'|translate}}.
+              </p>
+            </div>
+            <!--<div class="price">
+              <p *ngIf="object.id !== 1 && object.id !== 2 && object.id !==  6 && object.id !== 7 && object.id !== 9">
+                Cena već od €{{object.area * 180}}
+              </p>
+              <p *ngIf="object.id === 1">Cena već od €19667</p>
+              <p *ngIf="object.id === 2">Cena već od €17844</p>
+              <p *ngIf="object.id === 6">Cena već od €13570</p>
+              <p *ngIf="object.id === 7">Cena već od €18124</p>
+              <p *ngIf="object.id === 9">Cena već od €30395</p>
+
+            </div>-->
+            <div class="address">
+              <p>{{'OBJECTS.type'|translate}} {{object.buildingType|translate}}</p>
+            </div>
+            <div class="button">
+              <button mat-raised-button style="color: black">{{'OBJECTS.viewDetails'|translate}}</button>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab [label]="'OBJECTS.brvnare'|translate">
+        <div class="container">
+          <div class="apartment" *ngFor="let object of brvnare" [routerLink]="'/objects/' + object?.id"
+               style="outline: none">
+            <div class="image" *ngIf="object">
+              <div class="icon">
+                <div class="eye">
+                  <mat-icon>remove_red_eye</mat-icon>
+                </div>
+              </div>
+
+              <img [src]="'../../../../assets/images/objekti/' + object.mainImage">
+            </div>
+            <div class="icons">
+      <span>
+        <mat-icon style="margin-right: 5px">zoom_out_map</mat-icon>
+        {{object.area}} m2
+      </span>
+              <span>
+        <mat-icon style="margin-right: 5px">hotel</mat-icon>
+                {{object.rooms}} {{(object.rooms > 1 ? 'OBJECTS.2bedroom' : 'OBJECTS.1bedroom')|translate}}
+      </span>
+            </div>
+            <div class="text">
+              <div class="name">
+                <span>{{object.name}}</span>
+                <span><mat-icon>remove_red_eye</mat-icon> 1000</span>
+              </div>
+              <p>
+                {{'OBJECTS.detailArea'|translate}} {{object.area}}
+                m2. {{'OBJECTS.detailRooms'|translate}} {{object.rooms}} {{(object.rooms > 1 ? 'OBJECTS.2bedroom' : 'OBJECTS.1bedroom')|translate}}
+                , {{object.bathrooms}}  {{'OBJECTS.bathRoom'|translate}}
+                {{'OBJECTS.and'|translate}} {{object.terace}} {{'OBJECTS.terrace'|translate}}.
+              </p>
+            </div>
+            <!-- <div class="price">
+               <p *ngIf="object.id !== 1 && object.id !== 2 && object.id !==  6 && object.id !== 7 && object.id !== 9">
+                 Cena već od €{{object.area * 180}}
+               </p>
+               <p *ngIf="object.id === 1">Cena već od €19667</p>
+               <p *ngIf="object.id === 2">Cena već od €17844</p>
+               <p *ngIf="object.id === 6">Cena već od €13570</p>
+               <p *ngIf="object.id === 7">Cena već od €18124</p>
+               <p *ngIf="object.id === 9">Cena već od €30395</p>
+
+             </div>-->
+            <div class="address">
+              <p>{{'OBJECTS.type'|translate}} {{object.buildingType|translate}}</p>
+            </div>
+            <div class="button">
+              <button mat-raised-button style="color: black">{{'OBJECTS.viewDetails'|translate}}</button>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+    <!--      NOVO -->
+    <!-- <div class="container">
+       <div class="apartment" *ngFor="let object of objects" [routerLink]="'/objects/' + object?.id" style="outline: none">
+         <div class="image" *ngIf="object" >
+           <div class="icon">
+             <div class="eye">
+               <mat-icon>remove_red_eye</mat-icon>
+             </div>
+           </div>
+
+           <img [src]="'../../../../assets/images/objekti/' + object.mainImage">
+         </div>
+         <div class="icons">
+       <span>
+         <mat-icon style="margin-right: 5px">zoom_out_map</mat-icon> {{object.area}} m2
+       </span>
+           <span>
+         <mat-icon style="margin-right: 5px">hotel</mat-icon> {{object.rooms}} Spavace sobe
+       </span>
+         </div>
+         <div class="text">
+           <div class="name">
+             <span>{{object.name}}</span>
+             <span><mat-icon>remove_red_eye</mat-icon> 1000</span>
+           </div>
+           <p>
+             Kuća je površine {{object.area}} m2 . Sastoji se od {{object.rooms}} spavaće sobe, {{object.bathrooms}}  kupatila
+             i {{object.terace}} terase.
+           </p>
+         </div>
+         <div class="price">
+           <p *ngIf="object.id !== 1 && object.id !== 2 && object.id !==  6 && object.id !== 7 && object.id !== 9">
+             Cena već od €{{object.area * 180}}
+           </p>
+           <p *ngIf="object.id === 1">Cena već od €19667</p>
+           <p *ngIf="object.id === 2">Cena već od €17844</p>
+           <p *ngIf="object.id === 6">Cena već od €13570</p>
+           <p *ngIf="object.id === 7">Cena već od €18124</p>
+           <p *ngIf="object.id === 9">Cena već od €30395</p>
+
+         </div>
+         <div class="address">
+           <p>Tip {{object.type}}</p>
+         </div>
+         <div class="button">
+           <button mat-raised-button style="color: black">Pogledaj Detalje</button>
+         </div>
+       </div>
+     </div>-->
+  </div>
+</div>
+

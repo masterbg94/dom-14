@@ -47,6 +47,33 @@ export const routes: Routes = [
       description: 'Firma osnovana 93.godine i lider smo na trzistu montaznih kuca.Koristimo prirodne materijale za montazne kuce i savremenu tehnologiju sa vrhunskim strucnjacima',
       ogTitle: 'Dom montazne kuce tehnologije gradnje montaznih kuca|Montazni domovi',
     },
+  },
+  {
+    path: 'products',
+    loadChildren: () => import('./modules/products/products.module').then(m => m.ProductsModule),
+    data: {
+      title: 'Dom montazne kuce proizvodi montaznih kuca|Nasi proizvodi',
+      description: 'Firma osnovana 93.godine i lider smo na trzistu montaznih kuca.Koristimo prirodne materijale za montazne kuce i savremenu tehnologiju sa vrhunskim strucnjacima',
+      ogTitle: 'Dom montazne kuce proizvodi montaznih kuca|Nasi proizvodi',
+    },
+  },
+  {
+    path: 'objects',
+    loadChildren: () => import('./modules/objects/objects.module').then(m => m.ObjectsModule),
+    data: {
+      title: 'Dom montazne kuce proizvodi montaznih kuca|Nasi proizvodi',
+      description: 'Firma osnovana 93.godine i lider smo na trzistu montaznih kuca.Koristimo prirodne materijale za montazne kuce i savremenu tehnologiju sa vrhunskim strucnjacima',
+      ogTitle: 'Dom montazne kuce proizvodi montaznih kuca|Nasi proizvodi',
+    },
+  },
+  {
+    path: 'objects/:id',
+    loadChildren: () => import('./modules/property-detail/property-detail.module').then(m => m.PropertyDetailModule),
+    data: {
+      title: 'Dom montazne kuce proizvodi montaznih kuca|Nasi proizvodi',
+      description: 'Firma osnovana 93.godine i lider smo na trzistu montaznih kuca.Koristimo prirodne materijale za montazne kuce i savremenu tehnologiju sa vrhunskim strucnjacima',
+      ogTitle: 'Dom montazne kuce proizvodi montaznih kuca|Nasi proizvodi',
+    },
   }
 ]
 

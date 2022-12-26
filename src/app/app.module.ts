@@ -10,6 +10,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {customMaterialModule} from "./shared/customMaterial.module";
 import {FooterModule} from "./shared/components/footer/footer.module";
+import {ObjectsService} from "./shared/services/object.service";
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -36,7 +37,7 @@ export function createTranslateLoader(http: HttpClient) {
     }),
     HttpClientModule
   ],
-  providers: [],
+  providers: [ObjectsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

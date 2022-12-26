@@ -1,0 +1,149 @@
+<div class="wrapper">
+  <div class="info"></div>
+  <div class="content"></div>
+</div>
+<div class="wrapper-content">
+  <div class="content">
+    <div class="tableAndGallery">
+      <div class="table">
+        <div class="text">
+          <h1>Informacije o objektu</h1>
+          <span>#{{apartment?.id}}</span>
+        </div>
+        <div class="apartment-info">
+          <div class="item">
+            <span>Objekat</span>
+            <span class="second">{{apartment?.name}}</span>
+          </div>
+          <div class="item">
+            <span>Tip objekta</span>
+            <span class="second">{{apartment?.type}}</span>
+          </div>
+          <div class="item">
+            <span>Povrsina</span>
+            <span class="second">{{apartment?.area}} m2</span>
+          </div>
+          <div class="item">
+            <span>Broj spavacih soba</span>
+            <span class="second">{{apartment?.rooms}}</span>
+          </div>
+          <div class="item">
+            <span>Broj kupatila</span>
+            <span class="second">{{apartment?.bathrooms}}</span>
+          </div>
+          <div class="item">
+            <span>Terasa</span>
+            <span class="second">{{apartment?.terace}}</span>
+          </div>
+        </div>
+        <h1>Opis Nekretnine</h1>
+        <p style="padding-bottom: 20px">
+          Tipski objekti su u sistemu zida „Klasik“ za koji je i formirana cena po kvadratu
+        </p>
+        <div class="equipment">
+          <div class="circule"></div>
+          <p>
+            od 280 do 340 evra – siva faza
+          </p>
+        </div>
+        <div class="equipment">
+          <div class="circule"></div>
+          <p>od 550 do 650 evra – ključ u ruke</p>
+        </div>
+        <div class="equipment">
+          <div class="circule"></div>
+          <p>Temelj od 80 do 100 evra u zavisnosti od terena</p>
+        </div>
+        <div class="equipment">
+          <div class="circule"></div>
+          <p>Kvadrature ispod 100m kv se posebno dogovaraju</p>
+        </div>
+        <p style="padding-top: 10px">
+          u zavisnosti od termičke izolovanosti podova i plafona, krovnog pokrivača i
+          stolarije.
+          Oblici ponude se nalaze na stranici <a href="" style="color: #FFC200">tehnologija i sitemi gradnje</a>
+        </p>
+      </div>
+      <div class="gallery">
+        <div class="text">
+          <h1>Galerija</h1>
+          <span>Pregladalo je ukupno 150 ljudi</span>
+        </div>
+        <!--TODO: Replace with npm i @kolkov/ngx-gallery-->
+        <!--<ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>-->
+        <div class="contact" *ngIf="innerWidth > 570">
+          <h1>Kontaktirajte Nas</h1>
+        </div>
+      </div>
+    </div>
+    <div class="eqAndForm">
+      <div class="equipment-container">
+        <div class="text-eq">
+          <h1>Ukljuceno u osnovnu ponudu sive gradnje</h1>
+        </div>
+        <div class="equipment" *ngFor="let equipment of apartment?.equipment">
+          <div class="circule"></div>
+          <p>{{equipment?.name}}</p>
+        </div>
+        <div class="text-alert">
+          <h1 style="padding-bottom: 10px">Napomena</h1>
+          <p>
+            Cenu za svaku montažnu kuću sa drugim slojevima zidova i ostalim elementima i
+            ugrađenim materijalima po zahtevu korisnika utvrdićemo tek posle zajedničkog
+            razmatranja svih vaših želja i potreba i jedino tako cena montažne kuće može biti
+            adekvatno formirana!
+          </p>
+        </div>
+      </div>
+      <div class="form">
+        <div class="text-eq" *ngIf="innerWidth < 570">
+          <h1>Kontaktirajte nas</h1>
+        </div>
+        <form [formGroup]="form">
+          <div class="twoInputs">
+            <mat-form-field>
+              <input matInput type="text" formControlName="firstName" placeholder=" Ime">
+              <mat-error>Molimo unesite vase ime</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput type="text" formControlName="lastName" placeholder="Prezime">
+              <mat-error>Molimo unesite vase prezime</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="twoInputs">
+            <mat-form-field>
+              <input matInput type="text" formControlName="phone" placeholder="Kontakt Telefon">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput type="email" formControlName="email" placeholder="Email adresa">
+              <mat-error>Molimo unesite ispravan Email</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="oneInput">
+            <mat-form-field>
+              <textarea matInput #message maxlength="500" placeholder="Poruka" [rows]="5" mat-autosize="false"
+                        formControlName="message"></textarea>
+              <mat-hint align="end">{{message.value.length}} / 500</mat-hint>
+              <mat-error>Poruka ne sme biti praznog sadrzaja</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="twoInputs">
+            <button mat-fab color="primary" (click)="sendEmail()" [disabled]="!form.valid">
+              <mat-icon>send</mat-icon>
+            </button>
+            <div class="accept">
+              Klikom na dugme ‚posalji‘ slazete se sa nasim <a href="">pravilima i uslovima
+              koriscenja</a> kao i sa <a href="">pravilima privatnosti </a> i dozvoljavate da vase podatke
+              koje prosledujete u kontakt formi mozemo sacuvati radi
+              ostvarivanja kontakta.
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="map">
+<!--    TODO: Fix maps -->
+<!--    <app-map></app-map>-->
+  </div>
+</div>
