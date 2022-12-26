@@ -1,0 +1,248 @@
+@import "../../../styles/palete";
+
+.wrapper {
+  width: 100%;
+  background: #313131;
+  position: relative;
+  display: block;
+  height: 500px;
+  padding-top: 90px;
+
+  .info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: url("/assets/images/tehnologije.png") center center no-repeat;
+    background-size: cover;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    margin: auto;
+    justify-content: left;
+    position: relative;
+    padding: 40px 0;
+  }
+}
+
+.wrapper-content {
+  width: 100%;
+  position: relative;
+  flex-direction: column;
+  height: 100%;
+
+  .content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: left;
+    position: relative;
+    padding: 40px 0;
+
+    table {
+      width: 97%;
+      margin-bottom: 20px;
+      margin-top: 40px;
+    }
+
+    .alert {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      margin: 0;
+
+      span {
+        color: #FEC40D;
+        margin-right: 5px;
+        font-weight: 400;
+      }
+
+      .fas {
+        margin-right: 5px;
+        margin-left: 5px;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    ::ng-deep .mat-tab-body-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h3 {
+      font-size: 21px;
+      font-weight: 400;
+      color: $ap-black-primary;
+      padding: 20px 0;
+    }
+
+    .fas {
+      &.fa-check {
+        color: $ap-green;
+      }
+
+      &.fa-times {
+        color: $ap-red;
+      }
+    }
+
+    .tehnology {
+      display: flex;
+
+      ::ng-deep.mat-tab-body-wrapper {
+        height: 460px;
+      }
+
+      h3 {
+        font-size: 21px;
+        font-weight: 400;
+        color: $ap-black-primary;
+      }
+
+      .left {
+        max-width: 45%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .right {
+        max-width: 55%;
+        display: flex;
+
+        img {
+          width: 100%;
+        }
+
+        flex-direction: column;
+
+        ::ng-deep .mat-tab-body-content {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        h4 {
+          font-size: 16px;
+          color: $ap-black-primary;
+          font-weight: 400;
+          margin: 0;
+          padding-top: 20px;
+        }
+
+        ul {
+          padding-top: 20px;
+
+          li {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+
+            .circule {
+              width: 15px;
+              height: 15px;
+              border-radius: 7.5px;
+              background: $ap-yellow;
+              margin-right: 10px;
+            }
+          }
+        }
+
+        h5 {
+          font-size: 15px;
+          font-weight: 400;
+          color: $ap-green;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    padding-top: 0;
+  }
+  .wrapper-content {
+    .content {
+      padding: 0 20px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper-content {
+    .content {
+      padding: 0 20px;
+
+      .tehnology {
+        flex-direction: column;
+
+        .left {
+          max-width: 100%;
+        }
+
+        .right {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 570px) {
+  .wrapper-content {
+    .content {
+      padding: 0;
+
+      table {
+        width: 100%;
+      }
+
+      .tehnology {
+        flex-direction: column;
+
+        p {
+          padding: 0 20px;
+        }
+
+        .left {
+          max-width: 100%;
+          padding: 0 20px;
+        }
+
+        .right {
+          max-width: 100%;
+          padding: 0 20px;
+
+          ul {
+            padding: 0 20px;
+          }
+
+          p {
+            padding: 0 20px;
+          }
+        }
+
+        h3, h4, h5 {
+          padding: 0 20px;
+        }
+      }
+
+      h3 {
+        padding: 20px;
+      }
+    }
+  }
+
+}

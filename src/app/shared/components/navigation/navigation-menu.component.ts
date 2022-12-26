@@ -36,7 +36,7 @@ export class NavigationMenuComponent implements OnInit {
     },
     {
       name: 'MENU.technology',
-      router: 'tehnology',
+      router: 'technology',
     },
     {
       name: 'MENU.contact',

@@ -4,6 +4,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatListModule} from "@angular/material/list";
+import {MatTabsModule} from "@angular/material/tabs";
 
 const customMaterial = [
   MatSidenavModule,
@@ -12,6 +13,7 @@ const customMaterial = [
   MatSidenavModule,
   MatToolbarModule,
   MatListModule,
+  MatTabsModule
 ]
 
 @NgModule({

@@ -1,0 +1,83 @@
+<div class="wrapper">
+  <div class="info"></div>
+  <div class="content"></div>
+</div>
+<div class="wrapper-content">
+  <div class="content">
+    <mat-tab-group>
+      <mat-tab [label]="'TECH.tab1'|translate">
+        <div class="tehnology">
+          <div class="left">
+            <h3 style="padding-bottom: 20px">
+              {{'MENU.technology'|translate|uppercase}}
+            </h3>
+            <p style="padding-right: 20px" [innerHTML]="'TECH.TechDetails'|translate">
+
+            </p>
+          </div>
+          <div class="right">
+            <h3>{{'TECH.wallSection'|translate}}</h3>
+            <mat-tab-group>
+              <mat-tab label="Klasik">
+                <img src="../../../../assets/images/presekzida.png">
+                <h4>{{'TECH.fasada'|translate}}</h4>
+                <ul>
+                  <li *ngFor="let name of klasik">
+                    <div class="circule"></div>
+                    {{name.name}}
+                  </li>
+                </ul>
+                <h5>{{'TECH.ukupnaDebljina'|translate}}: 237.5 mm</h5>
+                <p>
+                  {{'TECH.sviElementi'|translate}}
+                </p>
+              </mat-tab>
+              <mat-tab label="Premuim">
+                <img src="../../../../assets/images/presekzida.png">
+                <h4>{{'TECH.fasada'|translate}}</h4>
+                <ul>
+                  <li *ngFor="let name of premium">
+                    <div class="circule"></div>
+                    {{name.name}}
+                  </li>
+                </ul>
+                <h5>{{'TECH.ukupnaDebljina'|translate}}: 307.5 mm</h5>
+                <p>
+                  {{'TECH.sviElementi'|translate}}
+                </p>
+              </mat-tab>
+              <mat-tab label="Modern">
+                <img src="../../../../assets/images/presekzida.png">
+                <h4>{{'TECH.fasada'|translate}}</h4>
+                <ul>
+                  <li *ngFor="let name of modern">
+                    <div class="circule"></div>
+                    {{name.name}}
+                  </li>
+                </ul>
+                <h5>{{'TECH.ukupnaDebljina'|translate}}: 381.5 mm</h5>
+                <p>
+                  {{'TECH.sviElementi'|translate}}
+                </p>
+              </mat-tab>
+              <mat-tab label="Pasiv">
+                <img src="../../../../assets/images/presekzida.png">
+                <h4>{{'TECH.silikatna'|translate}} {{'TECH.fasada'|translate}}</h4>
+                <ul>
+                  <li *ngFor="let name of modern">
+                    <div class="circule"></div>
+                    {{name.name}}
+                  </li>
+                </ul>
+                <h5>{{'TECH.ukupnaDebljina'|translate}}: 459.5 mm</h5>
+                <p>
+                  {{'TECH.sviElementi'|translate}}
+                </p>
+              </mat-tab>
+            </mat-tab-group>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
