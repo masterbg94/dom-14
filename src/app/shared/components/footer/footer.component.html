@@ -1,0 +1,73 @@
+<div class="wrapper">
+  <div class="ribbon">
+    <img style="position: absolute" src="../../../../assets/images/footer/footer-ribbon.png">
+  </div>
+  <div class="content">
+    <div class="footer-left">
+      <ul class="agent">
+        <h3>{{'FOOTER.company'|translate}} Dom</h3>
+        <li *ngFor="let menu of agentMenu" [routerLink]="menu.router">
+          {{menu.name|translate}}
+        </li>
+      </ul>
+      <ul class="nekretnine">
+        <h3>{{'FOOTER.social'|translate}}</h3>
+        <li *ngFor="let menu of nekretnine">
+          <a href="{{menu.router}}" target="_blank" style="color:white">{{menu.name}}</a>
+        </li>
+      </ul>
+      <ul class="linkovi">
+        <h3>{{'FOOTER.usefulLinks'|translate}}</h3>
+        <li *ngFor="let menu of linkovi" [routerLink]="menu.router">
+          {{menu.name|translate}}
+        </li>
+      </ul>
+      <div class="contact">
+        <h3>{{'MENU.contact'|translate}}</h3>
+        <div class="info">
+          <p>
+            {{'phone'|translate}} 1: 381 64 923 04 07
+          </p>
+          <p>
+            {{'phone'|translate}} 2: 381 66 64 04 110
+          </p>
+          <p>
+            Email: montaznekucedom@gmail.com
+          </p>
+        </div>
+        <div class="address">
+          <p>
+            Sadjavac bb
+          </p>
+          <p>
+            32250 Ivanjica
+          </p>
+          <p>
+            Srbija
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-right">
+      <div class="encription">
+        <div class="time">
+          <h3>{{'FOOTER.workHrs'|translate}}</h3>
+          <div class="info">
+            <p>
+              {{'FOOTER.wrkDays'|translate}}: 08-17h
+            </p>
+            <p>
+              {{'FOOTER.saturday'|translate}}: 8-15h
+            </p>
+        </div>
+        </div>
+        <img src="../../../../assets/images/footer/ssl-encrypted.png" alt="ssl-encrypted.png">
+      </div>
+    </div>
+  </div>
+  <div class="copy">
+    <div class="content" style="padding: 0">
+      <span>Dom D.O.O © 2022 {{'FOOTER.rights'|translate}}</span>
+    </div>
+  </div>
+</div>

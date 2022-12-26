@@ -1,0 +1,249 @@
+@import '../../../styles/palete';
+
+.wrapper{
+  width: 100%;
+  height: 100%;
+  background: #333333;
+  .ribbon{
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+      img {
+        width: 100%;
+        left: 0 !important;
+        right: 0 !important;
+        position: absolute !important;
+      }
+    }
+  .content{
+    width: 1200px;
+    display: flex;
+    margin: auto;
+    height: 100%;
+    padding-top: 20px;
+    h3{
+      font-size: 16px;
+      color: $ap-yellow;
+      margin-bottom: 10px;
+    }
+    .footer-left{
+      width: 70%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      .contact{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        height: calc(100% - 60px);
+        p{
+          color: $ap-grey;
+          &:first-child{
+            padding-top: 10px;
+          }
+        }
+        .info{
+          display: flex;
+          flex-direction: column;
+        }
+        .address{
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          padding-top: 20px;
+        }
+
+      }
+    }
+    .footer-right{
+      width: 30%;
+      display: flex;
+      align-items: flex-start;
+      .encription{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        height: calc(100% - 60px);
+        width: 100%;
+        align-items: flex-end;
+        .info{
+          display: flex;
+          flex-direction: column;
+        }
+        p{
+          color: $ap-grey;
+          text-align: right;
+          &:first-child{
+            padding-top: 10px;
+          }
+        }
+        img{
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 15px;
+        }
+      }
+    }
+    ul{
+      padding: 30px 0;
+      list-style: none;
+      color: $ap-grey;
+      li{
+        padding-top: 10px;
+        cursor: pointer;
+        outline: none;
+        &:hover{
+          transition: .3s;
+          color: $ap-yellow;
+        }
+      }
+    }
+  }
+  .copy{
+    background: $ap-dark-black;
+    width: 100%;
+    height: 40px;
+    border-top: 1px solid #707070;
+    .content{
+      width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span{
+        color: $ap-grey;
+        font-size: 12px;
+      }
+    }
+  }
+}
+a {
+  color: #F2F2F2;
+  text-decoration: none;
+  text-underline: none;
+  outline: none;
+  transition: .3s;
+  &:hover {
+    color: $ap-yellow;
+    transition: .3s;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper{
+    display: block;
+    width: 100%;
+    .content{
+      width: 100%;
+      flex-direction: column;
+      .footer-left {
+        width: 100%;
+        .agent{
+          padding-left: 20px;
+        }
+        .contact{
+          padding-right: 20px;
+        }
+      }
+      .footer-right {
+        width: auto;
+        .encription {
+          flex-direction: row;
+          padding-left: 20px;
+          padding-right: 20px;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-top: 0;
+          padding-bottom: 20px;
+          img{
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .copy{
+      width: 100%;
+      height: 50px;
+      .content{
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row;
+        display: flex;
+        span{
+          padding: 0 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .wrapper{
+    display: block;
+    width: 100%;
+    .content{
+      width: 100%;
+      flex-direction: column;
+      .footer-left {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .agent{
+          padding-left: 20px;
+          padding-bottom: 0;
+        }
+        .linkovi {
+          padding-left: 20px;
+          padding-bottom: 0;
+        }
+        .nekretnine {
+          padding-right: 20px;
+          padding-bottom: 0;
+          a{
+            color: white!important;
+            height: 20px;
+          }
+        }
+        .contact{
+          margin-top: 20px;
+          padding-right: 0;
+          padding-left: 20px;
+          .address {
+            padding-top: 0;
+          }
+        }
+      }
+      .footer-right {
+        width: auto;
+        .encription {
+          flex-direction: row;
+          padding-top: 20px;
+          padding-left: 20px;
+          padding-right: 20px;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-top: 0;
+          padding-bottom: 20px;
+          img{
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    .copy{
+      width: 100%;
+      height: 50px;
+      .content{
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+        span{
+          padding: 0;
+        }
+      }
+    }
+  }
+
+}
