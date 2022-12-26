@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-// import { NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions } from 'ngx-gallery'; // TODO: Replace with npm i @kolkov/ngx-gallery
+import {Component, OnInit} from '@angular/core';
+import {NgxGalleryAnimation,NgxGalleryOptions,NgxGalleryImage} from '@kolkov/ngx-gallery';
 
 @Component({
   selector: 'app-products',
@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
   // TODO: Replace with npm i @kolkov/ngx-gallery
-  // public galleryOptions: NgxGalleryOptions[];
-  // public galleryImages: NgxGalleryImage[] = [];
-  static = '../../../../assets/images/dodatni-proizvodi/';
+  public galleryOptions: NgxGalleryOptions[];
+  public galleryImages: NgxGalleryImage[] = [];
+  static = '/assets/images/dodatni-proizvodi/';
   productPictures = {
     poluOblica: [
       {
@@ -182,7 +182,7 @@ export class ProductsComponent implements OnInit {
 
   constructor() {
     // TODO: Replace with npm i @kolkov/ngx-gallery
-   /* this.galleryOptions = [
+    this.galleryOptions = [
       {
         width: '100%',
         height: '400px',
@@ -202,10 +202,11 @@ export class ProductsComponent implements OnInit {
         breakpoint: 400,
         preview: false,
       },
-    ];*/
+    ];
   }
 
   ngOnInit() {
+    console.log(this.productPictures.pergola);
   }
 
 }

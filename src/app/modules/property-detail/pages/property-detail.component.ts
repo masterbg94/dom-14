@@ -1,8 +1,10 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {AbstractControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {MatSnackBar} from '@angular/material/snack-bar';
 import {ActivatedRoute} from '@angular/router';
-// import {NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions} from 'ngx-gallery'; // TODO: Replace with npm i @kolkov/ngx-gallery
+import {MatSnackBar} from '@angular/material/snack-bar';
+
+import {NgxGalleryAnimation,NgxGalleryOptions,NgxGalleryImage} from '@kolkov/ngx-gallery';
+
 import {Image, ObjectsModel} from 'src/app/shared/model/objects.model';
 import {ObjectsService} from 'src/app/shared/services/object.service';
 
@@ -13,9 +15,8 @@ import {ObjectsService} from 'src/app/shared/services/object.service';
 export class PropertyDetailComponent implements OnInit {
   public form: FormGroup;
   public apartment: ObjectsModel;
-  // TODO: Replace with npm i @kolkov/ngx-gallery
-  // public galleryOptions: NgxGalleryOptions[];
-  // public galleryImages: NgxGalleryImage[] = [];
+  public galleryOptions: NgxGalleryOptions[];
+  public galleryImages: NgxGalleryImage[] = [];
   public static = '../../../../assets/images/objekti/';
   public name: string;
   public innerWidth: number;
@@ -26,7 +27,7 @@ export class PropertyDetailComponent implements OnInit {
               public snackBar: MatSnackBar) {
     this.innerWidth = window.innerWidth;
     // TODO: Replace with npm i @kolkov/ngx-gallery
-    /*this.galleryOptions = [
+    this.galleryOptions = [
       {
         width: '100%',
         height: '400px',
@@ -46,7 +47,7 @@ export class PropertyDetailComponent implements OnInit {
         breakpoint: 400,
         preview: false,
       },
-    ];*/
+    ];
     this.form = this.formBuilder.group({
       firstName: this.formBuilder.control([], Validators.required),
       lastName: this.formBuilder.control([], Validators.required),
@@ -78,15 +79,13 @@ export class PropertyDetailComponent implements OnInit {
       if (params) {
         this.apartment = this.objectService.getObject(params['id']);
         if (this.apartment.images != null) {
-          return;
-          // TODO: Replace with npm i @kolkov/ngx-gallery
-          /*this.apartment.images.forEach((image: Image) => {
+          this.apartment.images.forEach((image: Image) => {
             this.galleryImages.push({
               small: this.static + image.medium,
               medium: this.static + image.medium,
               big: this.static + image.medium
             });
-          });*/
+          });
         }
       }
     });
