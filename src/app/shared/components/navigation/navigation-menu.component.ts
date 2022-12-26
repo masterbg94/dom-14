@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { TranslateService } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navigation-menu',
@@ -71,8 +71,8 @@ export class NavigationMenuComponent implements OnInit {
   ];
   currentLanguage = this.availableLanguages[0];
 
-  // constructor(private translateService: TranslateService) {
-  // }
+  constructor(private translateService: TranslateService) {
+  }
   public ngOnInit(): void {
     let prevScrollpos = window.pageYOffset;
 
@@ -95,6 +95,6 @@ export class NavigationMenuComponent implements OnInit {
 
   public setLanguage(language: any) {
     this.currentLanguage = language;
-    // this.translateService.use(language.value);
+    this.translateService.use(language.value);
   }
 }

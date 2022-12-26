@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
-// import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { NavigationMenuComponent } from './navigation-menu.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -13,7 +13,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     RouterModule,
     MatIconModule,
     NgbModule,
-    // TranslateModule,
+    TranslateModule,
   ],
   declarations: [
 	  NavigationMenuComponent,

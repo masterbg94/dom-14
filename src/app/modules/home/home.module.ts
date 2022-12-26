@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {HomeComponent} from './home.component';
 import {HomeRoutingModule} from "./home-routing.module";
 import {CarouselModule} from "ngx-bootstrap/carousel";
+import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import {CarouselModule} from "ngx-bootstrap/carousel";
   imports: [
     CommonModule,
     HomeRoutingModule,
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    TranslateModule
   ]
 })
 export class HomeModule {

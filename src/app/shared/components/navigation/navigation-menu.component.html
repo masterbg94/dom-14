@@ -20,7 +20,7 @@
                style="cursor: pointer;user-select: none;display: flex">
 
               <img class="flag" src="{{currentLanguage.flag}}">
-              <div class="label">{{currentLanguage.label }}</div>
+              <div class="label">{{currentLanguage.label | translate}}</div>
             </a>
 
             <div ngbDropdownMenu
@@ -33,7 +33,7 @@
                 (click)="setLanguage(language)">
 
                 <img class="flag" [src]="language.flag">
-                {{language.label }}
+                {{language.label | translate}}
               </button>
             </div>
           </div>
@@ -68,7 +68,7 @@
             [routerLinkActive]="['active-link']"
             [routerLink]="nav.router"
             [routerLinkActiveOptions]= "{exact:true}">
-            {{nav.name}}
+            {{nav.name | translate}}
           </li>
         </ul>
       </div>

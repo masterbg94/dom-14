@@ -1,4 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
+import {TranslateService} from "@ngx-translate/core";
 
 
 @Component({
@@ -54,6 +55,12 @@ export class AppComponent implements OnInit {
   ];
   public navbarCollapsed: boolean;
   @ViewChild('drawer') drawer: any;
+
+  constructor(private translateService: TranslateService) {
+    translateService.addLangs(['sr', 'en']);
+    translateService.setDefaultLang('sr');
+    translateService.use('sr');
+  }
 
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;
