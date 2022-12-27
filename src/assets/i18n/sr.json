@@ -46,7 +46,7 @@
     "social": "Socijalne mreze",
     "usefulLinks": "Korisni linkovi",
     "workHrs": "Radno vreme",
-    "wrkDays": "Monday-Friday",
+    "wrkDays": "Ponedeljak-Petak",
     "saturday": "Subota",
     "rights": "Sva prava zadrzana",
     "privacy": "Politika privatnosti",
@@ -134,7 +134,7 @@
   },
   "CONTACT": {
     "header": "Stupimo u kontakt",
-    "headerTxt": "Zajedno imamo jedan jedini cilj… Pronadimo vase idealno mesto, podelite sa nama vase interesovanje a mi cemo se potruditi da vam sto pre pronadjemo zeljene objekte.",
+    "headerTxt": "Zajedno imamo jedan jedini cilj. Pronadjimo vase idealno mesto, podelite sa nama vase interesovanje a mi cemo se potruditi da vam sto pre pronadjemo zeljene objekte.",
     "contactUs": "Kontaktirajte nas putem poruke",
     "pleaseEnterYour": "Molimo unesite vase ",
     "name": "ime",

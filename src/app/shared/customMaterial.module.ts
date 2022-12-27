@@ -23,7 +23,7 @@ const customMaterial = [
   MatInputModule,
   MatIconModule,
   MatButtonModule,
-  MatSnackBarModule,
+  MatSnackBarModule
 ]
 
 @NgModule({

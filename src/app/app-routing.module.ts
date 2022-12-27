@@ -58,6 +58,15 @@ export const routes: Routes = [
     },
   },
   {
+    path: 'contact',
+    loadChildren: () => import('./modules/contact/contact.module').then(m => m.ContactModule),
+    data: {
+      title: 'Kontaktirajte montazne kuce Dom|Kontakt montazne kuce',
+      description: 'Firma osnovana 93.godine i lider smo na trzistu montaznih kuca.Koristimo prirodne materijale za montazne kuce i savremenu tehnologiju sa vrhunskim strucnjacima',
+      ogTitle: 'Kontaktirajte montazne kuce Dom|Kontakt montazne kuce',
+    },
+  },
+  {
     path: 'objects',
     loadChildren: () => import('./modules/objects/objects.module').then(m => m.ObjectsModule),
     data: {
