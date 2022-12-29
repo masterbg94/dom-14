@@ -11,16 +11,15 @@ import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {customMaterialModule} from "./shared/customMaterial.module";
 import {FooterModule} from "./shared/components/footer/footer.module";
 import {ObjectsService} from "./shared/services/object.service";
+import {BrowserModule} from "@angular/platform-browser";
 
-export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-}
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
@@ -41,4 +40,7 @@ export function createTranslateLoader(http: HttpClient) {
   bootstrap: [AppComponent]
 })
 export class AppModule {
+}
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
 }
