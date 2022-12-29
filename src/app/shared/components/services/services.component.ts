@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import {Globals} from "../../services/globals";
 
 @Component({
   selector: 'app-services',
@@ -32,12 +33,19 @@ export class ServicesComponent implements OnInit{
     }
   ];
 
+  constructor(public globals: Globals) {
+  }
+
   public ngOnInit(): void {
-    this.innerWidth = window.innerWidth;
+    if (this.globals.isPlatformBrowser){
+      this.innerWidth = window.innerWidth;
+    }
   }
 
   @HostListener('window:resize', ['$event'])
   public onResize(): void {
-    this.innerWidth = window.innerWidth;
+    if (this.globals.isPlatformBrowser){
+      this.innerWidth = window.innerWidth;
+    }
   }
 }

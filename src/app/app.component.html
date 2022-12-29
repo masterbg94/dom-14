@@ -17,14 +17,16 @@
              [routerLinkActive]="['active']"
              [routerLinkActiveOptions]="{exact:true}"
              (click)="drawer.toggle()"
+             style="cursor: pointer"
         >
-          <span><i class="{{m.icon}}"></i> {{m.name}}</span>
+          <span><i class="{{m.icon}}"></i> {{m.name|translate}}</span>
         </div>
       </div>
     </mat-nav-list>
 
     <div class="copyright">
       <div class="language-mobile">
+        <!--TODO: Need to fix language dropdown for mobile-->
         <!--<div class="language-selector"
              ngbDropdown
              #myDrop="ngbDropdown"
@@ -69,7 +71,6 @@
         </div>
       </div>
       <div class="copy">Copyright by Dom D.O.O 2023</div>
-      <!--      <div class="copy" style="padding-bottom: 20px">Powered By Limit Consolidated</div>-->
     </div>
   </mat-drawer>
 
@@ -85,7 +86,7 @@
     </a>
     <button mat-icon-button (click)="drawer.toggle()" style="display: flex;outline: none;align-items: center">
       <mat-icon>reorder</mat-icon>
-      <p>{{'name'}}</p>
+      <p>{{name|translate}}</p>
     </button>
   </mat-toolbar>
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import {Globals} from "../../services/globals";
 
 @Component({
   selector: 'app-navigation-menu',
@@ -71,26 +72,28 @@ export class NavigationMenuComponent implements OnInit {
   ];
   currentLanguage = this.availableLanguages[0];
 
-  constructor(private translateService: TranslateService) {
+  constructor(private translateService: TranslateService, public globals: Globals) {
   }
   public ngOnInit(): void {
-    let prevScrollpos = window.pageYOffset;
+    if (this.globals.isPlatformBrowser){
+      let prevScrollpos = window.pageYOffset;
 
-    window.onscroll = function () {
-      const currentScrollPos = window.pageYOffset;
-      // console.log(currentScrollPos);
+      window.onscroll = function () {
+        const currentScrollPos = window.pageYOffset;
+        // console.log(currentScrollPos);
 
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById('header').classList.remove('hidden');
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById('header').classList.remove('hidden');
 
-      } else {
-        if (currentScrollPos > 60) {
-          document.getElementById('header').classList.add('hidden');
+        } else {
+          if (currentScrollPos > 60) {
+            document.getElementById('header').classList.add('hidden');
 
+          }
         }
-      }
-      prevScrollpos = currentScrollPos;
-    };
+        prevScrollpos = currentScrollPos;
+      };
+    }
   }
 
   public setLanguage(language: any) {

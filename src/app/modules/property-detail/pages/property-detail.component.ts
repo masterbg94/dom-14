@@ -1,12 +1,12 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {AbstractControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute} from '@angular/router';
-import {MatSnackBar} from '@angular/material/snack-bar';
 
 import {NgxGalleryAnimation,NgxGalleryOptions,NgxGalleryImage} from '@kolkov/ngx-gallery';
 
 import {Image, ObjectsModel} from 'src/app/shared/model/objects.model';
 import {ObjectsService} from 'src/app/shared/services/object.service';
+import {Globals} from "../../../shared/services/globals";
 
 @Component({
   templateUrl: './property-detail.component.html',
@@ -24,9 +24,10 @@ export class PropertyDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               public objectService: ObjectsService,
               public formBuilder: FormBuilder,
-              public snackBar: MatSnackBar) {
-    this.innerWidth = window.innerWidth;
-    // TODO: Replace with npm i @kolkov/ngx-gallery
+              public globals: Globals) {
+    if (globals.isPlatformBrowser){
+      this.innerWidth = window.innerWidth;
+    }
     this.galleryOptions = [
       {
         width: '100%',
@@ -119,6 +120,8 @@ export class PropertyDetailComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   public onResize(): void {
-    this.innerWidth = window.innerWidth;
+    if (this.globals.isPlatformBrowser){
+      this.innerWidth = window.innerWidth;
+    }
   }
 }
