@@ -12,6 +12,8 @@ import {customMaterialModule} from "./shared/customMaterial.module";
 import {FooterModule} from "./shared/components/footer/footer.module";
 import {ObjectsService} from "./shared/services/object.service";
 import {BrowserModule} from "@angular/platform-browser";
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -34,7 +36,13 @@ import {BrowserModule} from "@angular/platform-browser";
         deps: [HttpClient],
       }, defaultLanguage: 'sr'
     }),
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [ObjectsService],
   bootstrap: [AppComponent]
