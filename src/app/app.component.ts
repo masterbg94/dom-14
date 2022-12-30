@@ -87,6 +87,7 @@ export class AppComponent implements OnInit {
     // }
   ];
   currentLanguage = this.availableLanguages[0];
+  isBrowser: boolean;
 
   constructor(
     private translateService: TranslateService,
@@ -96,6 +97,7 @@ export class AppComponent implements OnInit {
     private titleService: Title,
     public globals: Globals
   ) {
+    this.isBrowser = globals.isPlatformBrowser;
     translateService.addLangs(['sr', 'en']);
     translateService.setDefaultLang('sr');
     translateService.use('sr');
