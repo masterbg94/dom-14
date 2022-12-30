@@ -1,11 +1,12 @@
 
-<div class="div" *ngIf="innerWidth > 1024">
+<div class="div">
   <app-navigation-menu></app-navigation-menu>
   <router-outlet></router-outlet>
   <app-footer></app-footer>
 </div>
 
-<mat-drawer-container class="main-container" *ngIf="innerWidth < 1025 " style="height: 100%">
+<!-- TODO: PROBLEM for SSR need to change menu to bootstrap -->
+<!--<mat-drawer-container class="main-container" *ngIf="innerWidth < 1025 " style="height: 100%">
   <mat-drawer #drawer class="side-menu" [opened]="!isOpen" style="padding: 0" [mode]="'over'" cdk-scrollable="false">
     <mat-nav-list>
       <div class="listnav">
@@ -26,8 +27,8 @@
 
     <div class="copyright">
       <div class="language-mobile">
-        <!--TODO: Need to fix language dropdown for mobile-->
-        <!--<div class="language-selector"
+        &lt;!&ndash;TODO: Need to fix language dropdown for mobile&ndash;&gt;
+        &lt;!&ndash;<div class="language-selector"
              ngbDropdown
              #myDrop="ngbDropdown"
              aria-expanded=false
@@ -55,7 +56,7 @@
               {{language.label | translate}}
             </button>
           </div>
-        </div>-->
+        </div>&ndash;&gt;
       </div>
       <div class="social">
         <div class="circle f">
@@ -94,7 +95,7 @@
     <router-outlet></router-outlet>
     <app-footer></app-footer>
   </div>
-</mat-drawer-container>
+</mat-drawer-container>-->
 
 
 

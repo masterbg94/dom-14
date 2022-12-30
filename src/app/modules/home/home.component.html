@@ -45,7 +45,7 @@
             </p>
           </div>
           <button mat-button style="width: 300px"
-                  [routerLink]="'tehnology'">{{'SLIDE.slide2-button'|translate}}</button>
+                  [routerLink]="'technology'">{{'SLIDE.slide2-button'|translate}}</button>
         </div>
       </div>
     </slide>
@@ -96,15 +96,15 @@
       </p>
     </div>
     <div class="containers">
-      <div class="container" routerLink="/tehnology">
+      <div class="container" [routerLink]="'tehnology'">
         <img src="../../../../assets/images/home-images/tehnologija.png">
-        <button mat-button>{{'technology'|translate|uppercase}}</button>
+        <button mat-button>{{'MENU.technology'|translate|uppercase}}</button>
       </div>
-      <div class="container" routerLink="/aboutus">
+      <div class="container" [routerLink]="'aboutus'">
         <img src="../../../../assets/images/home-images/tehnology.png">
         <button mat-button>{{'MENU.aboutus'|translate|uppercase}}</button>
       </div>
-      <div class="container" routerLink="/gallery">
+      <div class="container" [routerLink]="'gallery'">
         <img src="../../../../assets/images/home-images/galerija.png">
         <button mat-button>{{'MENU.gallery'|translate|uppercase}}</button>
       </div>
