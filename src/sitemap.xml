@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>http://www.pavas.com/</loc>
+    <priority>1</priority>
+    <image:image>
+      <image:loc>http://www.pavas.com/home</image:loc>
+      <image:title>Montazne kuce dom | naslovna strana montaznih kuca</image:title>
+      <image:caption>Opis</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://www.pavas.com/aboutus</loc>
+    <priority>1</priority>
+    <image:image>
+      <image:loc>http://www.pavas.com/aboutus</image:loc>
+      <image:title>Montazne kuce dom | naslovna strana montaznih kuca</image:title>
+      <image:caption>Opis</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://www.pavas.com/services</loc>
+    <priority>1</priority>
+    <image:image>
+      <image:loc>http://www.pavas.com/services</image:loc>
+      <image:title>Montazne kuce dom | naslovna strana montaznih kuca</image:title>
+      <image:caption>Opis</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://www.pavas.com/objects</loc>
+    <priority>1</priority>
+    <image:image>
+      <image:loc>http://www.pavas.com/objects</image:loc>
+      <image:title>Montazne kuce dom | naslovna strana montaznih kuca</image:title>
+      <image:caption>Opis</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://www.pavas.com/products</loc>
+    <priority>1</priority>
+    <image:image>
+      <image:loc>http://www.pavas.com/products</image:loc>
+      <image:title>Montazne kuce dom | naslovna strana montaznih kuca</image:title>
+      <image:caption>Opis</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://www.pavas.com/gallery</loc>
+    <priority>1</priority>
+    <image:image>
+      <image:loc>http://www.pavas.com/gallery</image:loc>
+      <image:title>Montazne kuce dom | naslovna strana montaznih kuca</image:title>
+      <image:caption>Opis</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://www.pavas.com/technology</loc>
+    <priority>1</priority>
+    <image:image>
+      <image:loc>http://www.pavas.com/technology</image:loc>
+      <image:title>Montazne kuce dom | naslovna strana montaznih kuca</image:title>
+      <image:caption>Opis</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://www.pavas.com/contact</loc>
+    <priority>1</priority>
+    <image:image>
+      <image:loc>http://www.pavas.com/contact</image:loc>
+      <image:title>Montazne kuce dom | naslovna strana montaznih kuca</image:title>
+      <image:caption>Opis</image:caption>
+    </image:image>
+  </url>
+</urlset>
