@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import {Globals} from "../../services/globals";
+import {DataLayerService} from "../../services/data-layer.service";
 
 @Component({
   selector: 'app-navigation-menu',
@@ -72,7 +73,7 @@ export class NavigationMenuComponent implements OnInit {
   ];
   currentLanguage = this.availableLanguages[0];
 
-  constructor(private translateService: TranslateService, public globals: Globals) {
+  constructor(private translateService: TranslateService, public globals: Globals, private dlService:DataLayerService) {
   }
   public ngOnInit(): void {
     if (this.globals.isPlatformBrowser){
@@ -99,5 +100,13 @@ export class NavigationMenuComponent implements OnInit {
   public setLanguage(language: any) {
     this.currentLanguage = language;
     this.translateService.use(language.value);
+  }
+
+  novaMetoda(i: number) {
+    if (i === 7) {
+      this.dlService.logIvanaTest()
+      alert('ivana-test');
+      console.log('nova metoda index', i);
+    }
   }
 }

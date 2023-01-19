@@ -82,7 +82,9 @@
       <span style="font-weight: 500">{{'ribbon-heading' | translate}}</span>
       <span style="font-weight: 300">{{'ribbon-subheading' | translate}}</span>
     </div>
-    <button mat-raised-button="" [routerLink]="'/contact'">{{'ribbon-button' | translate}}</button>
+    <button mat-raised-button=""
+            (click)="GOhomeButtonContact()"
+            id="home-button-contact">{{'ribbon-button' | translate}}</button>
   </div>
 </div>
 <div class="wrapper">

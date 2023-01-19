@@ -4,6 +4,7 @@ import {ActivatedRoute, ActivatedRouteSnapshot, NavigationEnd, Router} from "@an
 import {filter} from "rxjs";
 import {Title} from "@angular/platform-browser";
 import {Globals} from "./shared/services/globals";
+import {DataLayerService} from "./shared/services/data-layer.service";
 
 
 @Component({
@@ -93,9 +94,9 @@ export class AppComponent implements OnInit {
     private translateService: TranslateService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
-
     private titleService: Title,
-    public globals: Globals
+    public globals: Globals,
+    private _dataLayerService: DataLayerService
   ) {
     this.isBrowser = globals.isPlatformBrowser;
     translateService.addLangs(['sr', 'en']);
@@ -135,6 +136,14 @@ export class AppComponent implements OnInit {
       childRoute.data.subscribe(data => {
         this.titleService.setTitle(data.title);
       });
+    });
+
+    // GOOGLE TAG MANAGER
+    this.router.events.subscribe(event=> { // subscribe to router events
+      if (event instanceof NavigationEnd) //if our event is of our interest
+      {
+        this._dataLayerService.logPageView(event.url) //call our dataLayer service's page view method to ping home with the url value.
+      }
     });
   }
 
