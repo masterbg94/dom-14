@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import {Globals} from "../../services/globals";
 
@@ -14,34 +14,42 @@ export class NavigationMenuComponent implements OnInit {
     {
       name: 'MENU.home',
       router: '',
+      icon: 'fas fa-home',
     },
     {
       name: 'MENU.aboutus',
       router: 'aboutus',
+      icon: 'fas fa-building',
     },
     {
       name: 'MENU.services',
       router: 'services',
+      icon: 'fas fa-shopping-bag',
     },
     {
       name: 'MENU.objects',
       router: 'objects',
+      icon: 'fab fa-houzz',
     },
     {
       name: 'MENU.products',
       router: 'products',
+      icon: 'fab fa-houzz',
     },
     {
       name: 'MENU.gallery',
       router: 'gallery',
+      icon: 'fas fa-camera',
     },
     {
       name: 'MENU.technology',
       router: 'technology',
+      icon: 'fas fa-sitemap',
     },
     {
       name: 'MENU.contact',
       router: 'contact',
+      icon: 'fas fa-map-marked',
     },
   ];
   public availableLanguages: any[] = [
@@ -71,6 +79,8 @@ export class NavigationMenuComponent implements OnInit {
     // }
   ];
   currentLanguage = this.availableLanguages[0];
+  @Input() width:number;
+  isMenuCollapsed:boolean = true;
 
   constructor(private translateService: TranslateService, public globals: Globals) {
   }
@@ -78,21 +88,23 @@ export class NavigationMenuComponent implements OnInit {
     if (this.globals.isPlatformBrowser){
       let prevScrollpos = window.pageYOffset;
 
-      window.onscroll = function () {
-        const currentScrollPos = window.pageYOffset;
-        // console.log(currentScrollPos);
+      if (this.width>1025){
+        window.onscroll = function () {
+          const currentScrollPos = window.pageYOffset;
+          // console.log(currentScrollPos);
 
-        if (prevScrollpos > currentScrollPos) {
-          document.getElementById('header').classList.remove('hidden');
+          if (prevScrollpos > currentScrollPos) {
+            document.getElementById('header').classList.remove('hidden');
 
-        } else {
-          if (currentScrollPos > 60) {
-            document.getElementById('header').classList.add('hidden');
+          } else {
+            if (currentScrollPos > 60) {
+              document.getElementById('header').classList.add('hidden');
 
+            }
           }
-        }
-        prevScrollpos = currentScrollPos;
-      };
+          prevScrollpos = currentScrollPos;
+        };
+      }
     }
   }
 
@@ -100,4 +112,9 @@ export class NavigationMenuComponent implements OnInit {
     this.currentLanguage = language;
     this.translateService.use(language.value);
   }
+
+  collapseMenu(){
+    this.isMenuCollapsed = !this.isMenuCollapsed;
+  }
+
 }

@@ -36,7 +36,7 @@ export const routes: Routes = [
     data: {
       title: 'Dom montazne kuce nase usluge|Usluge gradnje montaznih kuca',
       description: 'Firma osnovana 93.godine i lider smo na trzistu montaznih kuca.Koristimo prirodne materijale za montazne kuce i savremenu tehnologiju sa vrhunskim strucnjacima',
-      ogTitle: 'Dom montazne kuce|Galerija montaznih kuca Ivanjica',
+      ogTitle: 'Dom montazne kuce nase usluge|Usluge gradnje montaznih kuca',
     },
   },
   {

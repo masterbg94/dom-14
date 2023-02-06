@@ -1,75 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
-    <loc>http://www.pavas.com/</loc>
-    <priority>1</priority>
+    <loc>https://www.montaznekucedom.com/</loc>
+    <priority>1.0</priority>
     <image:image>
-      <image:loc>http://www.pavas.com/home</image:loc>
-      <image:title>Montazne kuce dom | naslovna strana montaznih kuca</image:title>
-      <image:caption>Opis</image:caption>
+      <image:loc>https://montaznekucedom.com/assets/images/gallery/house13.jpg</image:loc>
+      <image:title>Montazne kuce Dom | naslovna strana montaznih kuca</image:title>
+      <image:caption>Firma osnovana 93.godine i lider smo na trzistu montaznih kuca.Koristimo prirodne materijale za montazne kuce i savremenu tehnologiju sa vrhunskim strucnjacima</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>http://www.pavas.com/aboutus</loc>
-    <priority>1</priority>
+    <loc>https://www.montaznekucedom.com/aboutus</loc>
+    <priority>1.0</priority>
     <image:image>
-      <image:loc>http://www.pavas.com/aboutus</image:loc>
-      <image:title>Montazne kuce dom | naslovna strana montaznih kuca</image:title>
-      <image:caption>Opis</image:caption>
+      <image:loc>https://montaznekucedom.com/assets/images/gallery/house13.jpg</image:loc>
+      <image:title>Dom montazne kuce|O nama|O montaznim kucama</image:title>
+      <image:caption>Firma osnovana 93.godine i lider smo na trzistu montaznih kuca.Koristimo prirodne materijale za montazne kuce i savremenu tehnologiju sa vrhunskim strucnjacima</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>http://www.pavas.com/services</loc>
-    <priority>1</priority>
+    <loc>https://www.montaznekucedom.com/services</loc>
+    <priority>0.8</priority>
     <image:image>
-      <image:loc>http://www.pavas.com/services</image:loc>
-      <image:title>Montazne kuce dom | naslovna strana montaznih kuca</image:title>
-      <image:caption>Opis</image:caption>
+      <image:loc>https://montaznekucedom.com/assets/images/gallery/house13.jpg</image:loc>
+      <image:title>Dom montazne kuce nase usluge|Usluge gradnje montaznih kuca</image:title>
+      <image:caption>Firma osnovana 93.godine i lider smo na trzistu montaznih kuca.Koristimo prirodne materijale za montazne kuce i savremenu tehnologiju sa vrhunskim strucnjacima</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>http://www.pavas.com/objects</loc>
-    <priority>1</priority>
+    <loc>https://www.montaznekucedom.com/objects</loc>
+    <priority>0.9</priority>
     <image:image>
-      <image:loc>http://www.pavas.com/objects</image:loc>
-      <image:title>Montazne kuce dom | naslovna strana montaznih kuca</image:title>
-      <image:caption>Opis</image:caption>
+      <image:loc>https://montaznekucedom.com/assets/images/gallery/house13.jpg</image:loc>
+      <image:title>Dom montazne kuce|Objekti montaznih kuca Dom|Nasi objekti</image:title>
+      <image:caption>Firma osnovana 93.godine i lider smo na trzistu montaznih kuca.Koristimo prirodne materijale za montazne kuce i savremenu tehnologiju sa vrhunskim strucnjacima</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>http://www.pavas.com/products</loc>
-    <priority>1</priority>
+    <loc>https://www.montaznekucedom.com/products</loc>
+    <priority>0.8</priority>
     <image:image>
-      <image:loc>http://www.pavas.com/products</image:loc>
-      <image:title>Montazne kuce dom | naslovna strana montaznih kuca</image:title>
-      <image:caption>Opis</image:caption>
+      <image:loc>https://montaznekucedom.com/assets/images/gallery/house13.jpg</image:loc>
+      <image:title>Dom montazne kuce proizvodi montaznih kuca|Nasi proizvodi</image:title>
+      <image:caption>Firma osnovana 93.godine i lider smo na trzistu montaznih kuca.Koristimo prirodne materijale za montazne kuce i savremenu tehnologiju sa vrhunskim strucnjacima</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>http://www.pavas.com/gallery</loc>
-    <priority>1</priority>
+    <loc>https://www.montaznekucedom.com/gallery</loc>
+    <priority>0.9</priority>
     <image:image>
-      <image:loc>http://www.pavas.com/gallery</image:loc>
-      <image:title>Montazne kuce dom | naslovna strana montaznih kuca</image:title>
-      <image:caption>Opis</image:caption>
+      <image:loc>https://montaznekucedom.com/assets/images/gallery/house13.jpg</image:loc>
+      <image:title>Dom montazne kuce|Galerija montaznih kuca Ivanjica</image:title>
+      <image:caption>Firma osnovana 93.godine i lider smo na trzistu montaznih kuca.Koristimo prirodne materijale za montazne kuce i savremenu tehnologiju sa vrhunskim strucnjacima</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>http://www.pavas.com/technology</loc>
-    <priority>1</priority>
+    <loc>https://www.montaznekucedom.com/technology</loc>
+    <priority>1.0</priority>
     <image:image>
-      <image:loc>http://www.pavas.com/technology</image:loc>
-      <image:title>Montazne kuce dom | naslovna strana montaznih kuca</image:title>
-      <image:caption>Opis</image:caption>
+      <image:loc>https://montaznekucedom.com/assets/images/gallery/house13.jpg</image:loc>
+      <image:title>Dom montazne kuce tehnologije gradnje montaznih kuca|Montazni domovi</image:title>
+      <image:caption>Firma osnovana 93.godine i lider smo na trzistu montaznih kuca.Koristimo prirodne materijale za montazne kuce i savremenu tehnologiju sa vrhunskim strucnjacima</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>http://www.pavas.com/contact</loc>
-    <priority>1</priority>
+    <loc>https://www.montaznekucedom.com/contact</loc>
+    <priority>1.0</priority>
     <image:image>
-      <image:loc>http://www.pavas.com/contact</image:loc>
-      <image:title>Montazne kuce dom | naslovna strana montaznih kuca</image:title>
-      <image:caption>Opis</image:caption>
+      <image:loc>https://montaznekucedom.com/assets/images/gallery/house13.jpg</image:loc>
+      <image:title>Montazne kuce Dom | Kontaktirajte nas u vezi montaznih kuca</image:title>
+      <image:caption>Firma osnovana 93.godine i lider smo na trzistu montaznih kuca.Koristimo prirodne materijale za montazne kuce i savremenu tehnologiju sa vrhunskim strucnjacima</image:caption>
     </image:image>
   </url>
 </urlset>
