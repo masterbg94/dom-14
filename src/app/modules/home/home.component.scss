@@ -342,6 +342,22 @@ carousel::ng-deep {
         }
       }
     }
+    .first,.second,.third{
+      h2{
+        font-size: 18px;
+        padding: 0!important;
+        margin: 0!important;
+      }
+    }
+    button{
+      margin-top: 20px;
+      border-radius: 0;
+      outline: none;
+      background: #FFC200;
+      color: #212121;
+      width: 250px;
+      line-height: 36px;
+    }
   }
   .carousel-control-next-icon{
     background: url("/assets/images/arrows/r.png") center no-repeat;
@@ -387,6 +403,9 @@ carousel::ng-deep {
       color: $ap-dark-black;
       outline: none;
       display: flex;
+      line-height: 36px;
+      padding: 0 16px;
+      font-weight: bold;
     }
   }
 }
@@ -418,17 +437,17 @@ carousel::ng-deep {
       display: flex;
       flex-direction: column;
       align-items: center;
-      h3{
-        font-weight: 500;
-        font-size: 14px;
-      }
       h1{
         font-weight: 500;
         font-size: 22px;
+      }
+      h2{
+        font-weight: 500;
+        font-size: 18px;
         span {
           color: $ap-yellow;
           font-weight: 500;
-          font-size: 22px;
+          font-size: 18px;
         }
       }
       p{
