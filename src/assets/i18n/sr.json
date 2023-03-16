@@ -24,12 +24,12 @@
     "slide3-button": "KONTAKT"
   },
   "HOME-SERVICES": {
-    "service-heading": "U KORAK SA EVROPSKIM STANDARDIMA",
+    "service-heading": "MONTAZNE KUCE U KORAK SA EVROPSKIM STANDARDIMA",
     "service-subheading": "KLjUC U RUKE ",
     "service-subheading1": "ZA SVEGA PAR NEDELjA",
-    "service-txt": "U zavisnosti od zahteva tržišta za koje gradimo, a uz naše iskustvo i znanje Vaš dom može biti gotov za svega par nedelja od dana potpisivanja ugovora."
+    "service-txt": "U zavisnosti od zahteva tržišta za koje gradimo, a uz naše iskustvo i znanje Vaš dom (montazna kuca) može biti gotov za svega par nedelja od dana potpisivanja ugovora."
   },
-  "map-txt1": "MI SMO SVUDA OKO VAS",
+  "map-txt1": "MONTAZNE KUCE SU SVUDA OKO VAS",
   "map-txt2": "DO SADA SMO IZGRADILI",
   "map-txt3": "DOBAR DEO EVROPE",
   "map-txt4": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
@@ -53,10 +53,12 @@
     "terms": "Pravila koriscenja"
   },
   "ABOUT": {
+    "vision": "Vizija",
+    "mission": "Misija",
     "founded": "Je osnovana 1993. godine i lider smo na trzistu montaznih kuca. Koristimo prirodne materijale i savremenu tehnologiju, a pri tome sarađujemo sa vrhunskim stručnjacima kako bismo išli u korak sa savremenim trendovima koje nameće moderan način života. Cilj nam je da stvorimo izuzetan dom, damo oblik vašim snovima i tako mu zajednički udahnemo dušu",
     "tech": "Najsavremenija tehnologija i obučenost kadrova u proizvodnji i montažnih objekata različite namene, garancija su kvaliteta naših proizvoda i zadovoljstva naših kupaca.\nSmer našeg rada je lični pristup svakom klijentu. Cenu za svaku montažnu kuću utvrdićemo tek posle zajedničkog razmatranja svih vaših želja i potreba i jedino tako cena montažne kuće proizvedena u firmi Dom biće povoljna i apsolutno u skladu sa dobijenim kvalitetom.",
     "materials": "Živeti danas bolje ne podrazumeva samo udoban i prijatan boravak u kući, već i sveobuhvatan i odgovoran odnos prema sredini u kojoj živimo. Ekološki i kvalitetni materijali, primena najnovijih tehnologija, visoko stručna i motivisana ekipa profesionalaca, estetika i funkcionalnost uz striktno poštovanje rokova i Vaših zamisli su osnovni principi prilikom stvaranja Dom kuće. Za ljude sa stilom originalnost i individualnost su veoma značajni i o tome posebno vodimo računa.",
-    "wrapper-heading": "Kuca po vasoj zelji i meri",
+    "wrapper-heading": "Montazna kuca po vasoj zelji i meri",
     "wrapper-txt": "Zajedno imamo jedan jedini cilj… Napravimo vasu idealnu kucu, podelite sa nama vase interesovanje a mi cemo se potruditi da vam sto pre pomugnemo u ostvarenju vase kuce iz sna!",
     "our": "Naše",
     "services": "usluge"
